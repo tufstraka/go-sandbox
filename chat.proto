@@ -1,0 +1,16 @@
+syntax= "proto3";
+
+package chat;
+
+option go_package = "github.com/tufstraka/go-sandbox/chat";
+
+
+message Message {
+  string user = 1;
+  string text = 2;
+}
+
+service ChatService {
+  rpc Send (Message) returns (Message) {}
+}
+
